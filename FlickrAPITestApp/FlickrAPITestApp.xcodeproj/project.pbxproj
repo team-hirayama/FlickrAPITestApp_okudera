@@ -97,14 +97,14 @@
 		B66BDFB31DBB1C0800E6D146 /* FlickrAPITestApp */ = {
 			isa = PBXGroup;
 			children = (
-				B66BDFE91DBB228D00E6D146 /* SupportFiles */,
-				B66BDFE81DBB228500E6D146 /* Startup */,
-				B66BDFE71DBB227600E6D146 /* Resources */,
-				B66BDFE61DBB225900E6D146 /* Utility */,
-				B66BDFE51DBB225000E6D146 /* ViewController */,
-				B66BDFE41DBB224B00E6D146 /* Model */,
-				B66BDFE31DBB224600E6D146 /* View */,
 				B66BDFE21DBB223C00E6D146 /* AppDelegate */,
+				B66BDFE41DBB224B00E6D146 /* Model */,
+				B66BDFE71DBB227600E6D146 /* Resources */,
+				B66BDFE81DBB228500E6D146 /* Startup */,
+				B66BDFE91DBB228D00E6D146 /* SupportFiles */,
+				B66BDFE61DBB225900E6D146 /* Utility */,
+				B66BDFE31DBB224600E6D146 /* View */,
+				B66BDFE51DBB225000E6D146 /* ViewController */,
 			);
 			path = FlickrAPITestApp;
 			sourceTree = "<group>";
@@ -132,37 +132,37 @@
 			children = (
 				B66BDFB41DBB1C0800E6D146 /* AppDelegate.swift */,
 			);
-			name = AppDelegate;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		B66BDFE31DBB224600E6D146 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		B66BDFE41DBB224B00E6D146 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B66BDFE51DBB225000E6D146 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B66BDFB61DBB1C0800E6D146 /* ViewController.swift */,
 				B66BDFB81DBB1C0800E6D146 /* Main.storyboard */,
+				B66BDFB61DBB1C0800E6D146 /* ViewController.swift */,
 			);
-			name = ViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		B66BDFE61DBB225900E6D146 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Utility;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		B66BDFE71DBB227600E6D146 /* Resources */ = {
@@ -170,7 +170,7 @@
 			children = (
 				B66BDFBB1DBB1C0800E6D146 /* Assets.xcassets */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B66BDFE81DBB228500E6D146 /* Startup */ = {
@@ -178,7 +178,7 @@
 			children = (
 				B66BDFBD1DBB1C0800E6D146 /* LaunchScreen.storyboard */,
 			);
-			name = Startup;
+			path = Startup;
 			sourceTree = "<group>";
 		};
 		B66BDFE91DBB228D00E6D146 /* SupportFiles */ = {
@@ -186,7 +186,7 @@
 			children = (
 				B66BDFC01DBB1C0800E6D146 /* Info.plist */,
 			);
-			name = SupportFiles;
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +369,7 @@
 				B66BDFB91DBB1C0800E6D146 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		B66BDFBD1DBB1C0800E6D146 /* LaunchScreen.storyboard */ = {
@@ -377,6 +378,7 @@
 				B66BDFBE1DBB1C0800E6D146 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -480,7 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
-				INFOPLIST_FILE = FlickrAPITestApp/Info.plist;
+				INFOPLIST_FILE = FlickrAPITestApp/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = B8PR34D6DP.jp.yuoku.FlickrAPITestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,7 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
-				INFOPLIST_FILE = FlickrAPITestApp/Info.plist;
+				INFOPLIST_FILE = FlickrAPITestApp/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = B8PR34D6DP.jp.yuoku.FlickrAPITestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
