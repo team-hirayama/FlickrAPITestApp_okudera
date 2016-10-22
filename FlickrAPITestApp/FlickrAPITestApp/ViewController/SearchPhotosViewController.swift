@@ -9,17 +9,39 @@
 import UIKit
 
 class SearchPhotosViewController: UIViewController {
+    @IBOutlet var headerView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.setup()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func setup() {
+        SearchPhotos.search(text: "abc")
+        
+        collectionView.dataSource = self
     }
-
-
 }
 
+// MARK: - UICollectionViewDataSource
+extension SearchPhotosViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        //TODO: APIから取得できたら修正
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCollectionViewCell
+        
+        //TODO: APIから取得できたら修正
+        #if DEBUG
+        cell.imageView.image = UIImage(named: "noImage.png")
+        #endif
+        
+        return cell
+    }
+    
+}

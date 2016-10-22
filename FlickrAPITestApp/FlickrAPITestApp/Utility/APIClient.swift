@@ -22,7 +22,7 @@ class APIClient: NSObject {
                             completionHandler: @escaping (Result) -> () = {_ in})
     {
         let request = Alamofire.request(urlString, method: .get, parameters: params)
-        request.responseJSON { (response: DataResponse) in
+        request.responseData { (response: DataResponse) in
             let result = response.result
             
             if result.isSuccess {
