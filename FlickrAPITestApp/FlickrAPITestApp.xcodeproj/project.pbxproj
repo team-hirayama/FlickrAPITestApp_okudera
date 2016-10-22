@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		439EABD24E19253D8BEF1493 /* Pods_FlickrAPITestAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5F1B3BB059F51A2F51309D /* Pods_FlickrAPITestAppUITests.framework */; };
+		456C8F6E5E131E4D45CD5939 /* Pods_FlickrAPITestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799280485BB211E963CBE996 /* Pods_FlickrAPITestApp.framework */; };
 		B66BDFB51DBB1C0800E6D146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66BDFB41DBB1C0800E6D146 /* AppDelegate.swift */; };
-		B66BDFB71DBB1C0800E6D146 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66BDFB61DBB1C0800E6D146 /* ViewController.swift */; };
-		B66BDFBA1DBB1C0800E6D146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66BDFB81DBB1C0800E6D146 /* Main.storyboard */; };
+		B66BDFB71DBB1C0800E6D146 /* SearchPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66BDFB61DBB1C0800E6D146 /* SearchPhotosViewController.swift */; };
+		B66BDFBA1DBB1C0800E6D146 /* SearchPhotos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66BDFB81DBB1C0800E6D146 /* SearchPhotos.storyboard */; };
 		B66BDFBC1DBB1C0800E6D146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66BDFBB1DBB1C0800E6D146 /* Assets.xcassets */; };
 		B66BDFBF1DBB1C0800E6D146 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66BDFBD1DBB1C0800E6D146 /* LaunchScreen.storyboard */; };
 		B66BDFCA1DBB1C0800E6D146 /* FlickrAPITestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66BDFC91DBB1C0800E6D146 /* FlickrAPITestAppTests.swift */; };
 		B66BDFD51DBB1C0800E6D146 /* FlickrAPITestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66BDFD41DBB1C0800E6D146 /* FlickrAPITestAppUITests.swift */; };
+		B66BDFEB1DBB25D700E6D146 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66BDFEA1DBB25D700E6D146 /* APIClient.swift */; };
+		CA680936960896DFAD979F80 /* Pods_FlickrAPITestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9539DA3760B725E3E851A23 /* Pods_FlickrAPITestAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +38,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38D329A469C0EE60271F93C0 /* Pods-FlickrAPITestAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrAPITestAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrAPITestAppUITests/Pods-FlickrAPITestAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B5BAD991245DADE4C631181 /* Pods-FlickrAPITestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrAPITestAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrAPITestAppTests/Pods-FlickrAPITestAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		4B5F1B3BB059F51A2F51309D /* Pods_FlickrAPITestAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrAPITestAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDB841799B4C232C6B382AF /* Pods-FlickrAPITestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrAPITestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrAPITestApp/Pods-FlickrAPITestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		799280485BB211E963CBE996 /* Pods_FlickrAPITestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrAPITestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A08F04EFD25B730D6B743ACE /* Pods-FlickrAPITestAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrAPITestAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrAPITestAppUITests/Pods-FlickrAPITestAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2BC6AD0FAF60EA8B06C435A /* Pods-FlickrAPITestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrAPITestAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrAPITestAppTests/Pods-FlickrAPITestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B66BDFB11DBB1C0800E6D146 /* FlickrAPITestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrAPITestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66BDFB41DBB1C0800E6D146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B66BDFB61DBB1C0800E6D146 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B66BDFB91DBB1C0800E6D146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B66BDFB61DBB1C0800E6D146 /* SearchPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosViewController.swift; sourceTree = "<group>"; };
+		B66BDFB91DBB1C0800E6D146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchPhotos.storyboard; sourceTree = "<group>"; };
 		B66BDFBB1DBB1C0800E6D146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B66BDFBE1DBB1C0800E6D146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B66BDFC01DBB1C0800E6D146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +58,9 @@
 		B66BDFD01DBB1C0800E6D146 /* FlickrAPITestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrAPITestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66BDFD41DBB1C0800E6D146 /* FlickrAPITestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPITestAppUITests.swift; sourceTree = "<group>"; };
 		B66BDFD61DBB1C0800E6D146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B66BDFEA1DBB25D700E6D146 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B9539DA3760B725E3E851A23 /* Pods_FlickrAPITestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrAPITestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB9D2308CF557D4F4D8C042A /* Pods-FlickrAPITestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrAPITestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrAPITestApp/Pods-FlickrAPITestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456C8F6E5E131E4D45CD5939 /* Pods_FlickrAPITestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA680936960896DFAD979F80 /* Pods_FlickrAPITestAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +84,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439EABD24E19253D8BEF1493 /* Pods_FlickrAPITestAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5272B8AFD8C273A5A2A017A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EDB841799B4C232C6B382AF /* Pods-FlickrAPITestApp.debug.xcconfig */,
+				DB9D2308CF557D4F4D8C042A /* Pods-FlickrAPITestApp.release.xcconfig */,
+				B2BC6AD0FAF60EA8B06C435A /* Pods-FlickrAPITestAppTests.debug.xcconfig */,
+				4B5BAD991245DADE4C631181 /* Pods-FlickrAPITestAppTests.release.xcconfig */,
+				38D329A469C0EE60271F93C0 /* Pods-FlickrAPITestAppUITests.debug.xcconfig */,
+				A08F04EFD25B730D6B743ACE /* Pods-FlickrAPITestAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B63749B59472D10B7340B531 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				799280485BB211E963CBE996 /* Pods_FlickrAPITestApp.framework */,
+				B9539DA3760B725E3E851A23 /* Pods_FlickrAPITestAppTests.framework */,
+				4B5F1B3BB059F51A2F51309D /* Pods_FlickrAPITestAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B66BDFA81DBB1C0800E6D146 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +121,8 @@
 				B66BDFC81DBB1C0800E6D146 /* FlickrAPITestAppTests */,
 				B66BDFD31DBB1C0800E6D146 /* FlickrAPITestAppUITests */,
 				B66BDFB21DBB1C0800E6D146 /* Products */,
+				5272B8AFD8C273A5A2A017A8 /* Pods */,
+				B63749B59472D10B7340B531 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,8 +194,8 @@
 		B66BDFE51DBB225000E6D146 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B66BDFB81DBB1C0800E6D146 /* Main.storyboard */,
-				B66BDFB61DBB1C0800E6D146 /* ViewController.swift */,
+				B66BDFB81DBB1C0800E6D146 /* SearchPhotos.storyboard */,
+				B66BDFB61DBB1C0800E6D146 /* SearchPhotosViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -161,6 +203,7 @@
 		B66BDFE61DBB225900E6D146 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				B66BDFEA1DBB25D700E6D146 /* APIClient.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -196,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B66BDFD91DBB1C0800E6D146 /* Build configuration list for PBXNativeTarget "FlickrAPITestApp" */;
 			buildPhases = (
+				84AF51785228C7700D0B2C35 /* [CP] Check Pods Manifest.lock */,
 				B66BDFAD1DBB1C0800E6D146 /* Sources */,
 				B66BDFAE1DBB1C0800E6D146 /* Frameworks */,
 				B66BDFAF1DBB1C0800E6D146 /* Resources */,
+				A206A7D1FF0359581AF0C739 /* [CP] Embed Pods Frameworks */,
+				A31871325654BBC89BA6F144 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B66BDFDC1DBB1C0800E6D146 /* Build configuration list for PBXNativeTarget "FlickrAPITestAppTests" */;
 			buildPhases = (
+				8714F04DC41D84A056AAECF0 /* [CP] Check Pods Manifest.lock */,
 				B66BDFC11DBB1C0800E6D146 /* Sources */,
 				B66BDFC21DBB1C0800E6D146 /* Frameworks */,
 				B66BDFC31DBB1C0800E6D146 /* Resources */,
+				9CDC077A9D83647FB6E1345C /* [CP] Embed Pods Frameworks */,
+				A1AD3641159BE88C2B5C530C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,9 +280,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B66BDFDF1DBB1C0800E6D146 /* Build configuration list for PBXNativeTarget "FlickrAPITestAppUITests" */;
 			buildPhases = (
+				2709AE23B27A97F0B8893200 /* [CP] Check Pods Manifest.lock */,
 				B66BDFCC1DBB1C0800E6D146 /* Sources */,
 				B66BDFCD1DBB1C0800E6D146 /* Frameworks */,
 				B66BDFCE1DBB1C0800E6D146 /* Resources */,
+				8EA3ED3C024AB9449C47522A /* [CP] Embed Pods Frameworks */,
+				68BE2F01029291CF8D08AD69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,7 +353,7 @@
 			files = (
 				B66BDFBF1DBB1C0800E6D146 /* LaunchScreen.storyboard in Resources */,
 				B66BDFBC1DBB1C0800E6D146 /* Assets.xcassets in Resources */,
-				B66BDFBA1DBB1C0800E6D146 /* Main.storyboard in Resources */,
+				B66BDFBA1DBB1C0800E6D146 /* SearchPhotos.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,13 +373,152 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2709AE23B27A97F0B8893200 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		68BE2F01029291CF8D08AD69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickrAPITestAppUITests/Pods-FlickrAPITestAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84AF51785228C7700D0B2C35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8714F04DC41D84A056AAECF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA3ED3C024AB9449C47522A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickrAPITestAppUITests/Pods-FlickrAPITestAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CDC077A9D83647FB6E1345C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickrAPITestAppTests/Pods-FlickrAPITestAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1AD3641159BE88C2B5C530C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickrAPITestAppTests/Pods-FlickrAPITestAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A206A7D1FF0359581AF0C739 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickrAPITestApp/Pods-FlickrAPITestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A31871325654BBC89BA6F144 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickrAPITestApp/Pods-FlickrAPITestApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B66BDFAD1DBB1C0800E6D146 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B66BDFB71DBB1C0800E6D146 /* ViewController.swift in Sources */,
+				B66BDFB71DBB1C0800E6D146 /* SearchPhotosViewController.swift in Sources */,
 				B66BDFB51DBB1C0800E6D146 /* AppDelegate.swift in Sources */,
+				B66BDFEB1DBB25D700E6D146 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,12 +554,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B66BDFB81DBB1C0800E6D146 /* Main.storyboard */ = {
+		B66BDFB81DBB1C0800E6D146 /* SearchPhotos.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B66BDFB91DBB1C0800E6D146 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SearchPhotos.storyboard;
 			path = .;
 			sourceTree = "<group>";
 		};
@@ -479,10 +670,12 @@
 		};
 		B66BDFDA1DBB1C0800E6D146 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EDB841799B4C232C6B382AF /* Pods-FlickrAPITestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
 				INFOPLIST_FILE = FlickrAPITestApp/SupportFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = B8PR34D6DP.jp.yuoku.FlickrAPITestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,10 +685,12 @@
 		};
 		B66BDFDB1DBB1C0800E6D146 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB9D2308CF557D4F4D8C042A /* Pods-FlickrAPITestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
 				INFOPLIST_FILE = FlickrAPITestApp/SupportFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = B8PR34D6DP.jp.yuoku.FlickrAPITestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +700,7 @@
 		};
 		B66BDFDD1DBB1C0800E6D146 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2BC6AD0FAF60EA8B06C435A /* Pods-FlickrAPITestAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +716,7 @@
 		};
 		B66BDFDE1DBB1C0800E6D146 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B5BAD991245DADE4C631181 /* Pods-FlickrAPITestAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +732,7 @@
 		};
 		B66BDFE01DBB1C0800E6D146 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38D329A469C0EE60271F93C0 /* Pods-FlickrAPITestAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
@@ -549,6 +747,7 @@
 		};
 		B66BDFE11DBB1C0800E6D146 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A08F04EFD25B730D6B743ACE /* Pods-FlickrAPITestAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = B8PR34D6DP;

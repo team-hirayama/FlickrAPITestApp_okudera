@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchPhotosViewController.swift
 //  FlickrAPITestApp
 //
 //  Created by OkuderaYuki on 2016/10/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchPhotosViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
