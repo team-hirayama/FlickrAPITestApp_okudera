@@ -1,0 +1,14 @@
+@startuml{seq.png}
+title シーケンス図
+hide footbox
+
+View -> Controller : Show instruction
+Controller -> Model : Data acquisition instruction
+Model -> API : Data acquisition request
+
+API --> Model : Response
+Model --> Controller : Response
+
+Controller --> View : Output to the screen
+
+@enduml
