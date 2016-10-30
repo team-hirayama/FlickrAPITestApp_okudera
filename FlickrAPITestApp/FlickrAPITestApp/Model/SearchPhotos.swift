@@ -16,8 +16,7 @@ private struct elementName {
 }
 
 class SearchPhotos: NSObject {
-    
-    
+
     var photoInfoModel = PhotoInfoModel()
     var photosInfoModel = PhotosInfoModel()
     
@@ -26,8 +25,8 @@ class SearchPhotos: NSObject {
     }
     
     
-    func search(text: String, pageString: String, completionHandler: @escaping (_ responseImages: [UIImage]) -> Void) {
-//    func search(text: String, pageString: String) -> [UIImage] {
+    func search(text: String, pageString: String, completionHandler: @escaping (PhotosInfoModel) -> Void) {
+        
         let urlString = "https://api.flickr.com/services/rest/"
         let perPageString = "50"
         
@@ -38,8 +37,6 @@ class SearchPhotos: NSObject {
                                      "api_key": "10ba93bbe49a6480d765ce486673954a"]
         
         let apiClient = APIClient()
-        
-        var images = [UIImage]()
         
         apiClient.requestItems(urlString: urlString, params: params) { (response) in
             switch response {
@@ -53,21 +50,7 @@ class SearchPhotos: NSObject {
                 
                 debugPrint("---------XMLParse END---------")
 
-                for photoInfo in self.photosInfoModel.photos {
-//                    DispatchQueue.global(qos: .default).async {
-                    
-                        guard let url = URL(string: self.photoURL(photoInfo: photoInfo)) else {
-                            return
-                        }
-                        
-                        let imageData = try! Data(contentsOf: url)
-                        if let image = UIImage(data: imageData) {
-                            images.append(image)
-                        }
-                        
-//                    }
-                }
-                completionHandler(images)
+                completionHandler(self.photosInfoModel)
                 
             case .Error(let error):
                 debugPrint("error:\(error)")

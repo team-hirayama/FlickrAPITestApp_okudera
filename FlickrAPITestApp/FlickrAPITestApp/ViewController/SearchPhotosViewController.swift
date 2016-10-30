@@ -9,12 +9,11 @@
 import UIKit
 
 class SearchPhotosViewController: UIViewController {
-    @IBOutlet var headerView: UIView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var textField: UITextField!
     
-    fileprivate var images = [UIImage]()
+    fileprivate var photosInfoModel = PhotosInfoModel()
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -32,7 +31,6 @@ class SearchPhotosViewController: UIViewController {
         searchButton.isEnabled = false
     }
     
-    
     // MARK: - IBAction
     @IBAction func tappedSearchButton(_ sender: AnyObject) {
         
@@ -41,11 +39,11 @@ class SearchPhotosViewController: UIViewController {
         }
         
         let searchPhotos = SearchPhotos()
-        searchPhotos.search(text: searchText, pageString: "2") { (responseImages) in
-            self.images = responseImages
+        searchPhotos.search(text: searchText, pageString: "2") { (photosInfoModel) in
+            self.photosInfoModel = photosInfoModel
             self.collectionView.reloadData()
             
-            if self.images.count == 0 {
+            if self.photosInfoModel.photos.count == 0 {
                 let noImageMessage = "該当する写真がありません。検索ワードを変更してお試しください。"
                 let alert: UIAlertController = UIAlertController(title: "",
                                                                  message: noImageMessage,
@@ -64,15 +62,35 @@ class SearchPhotosViewController: UIViewController {
 extension SearchPhotosViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return self.photosInfoModel.photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCollectionViewCell
         
-        cell.imageView.image = self.images[indexPath.row]
-
+        // cellの再利用時に以前の画像が表示されないようnilセット
+        cell.imageView.image = nil
         
+        let searchPhotos = SearchPhotos()
+        let urlString = searchPhotos.photoURL(photoInfo: self.photosInfoModel.photos[indexPath.row])
+        cell.imageURLString = urlString
+        
+        DispatchQueue.global(qos: .default).async {
+            guard let url = URL(string: urlString) else {
+                return
+            }
+            let imageData = try! Data(contentsOf: url)
+            guard let image = UIImage(data: imageData) else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                if urlString == cell.imageURLString {
+                    cell.imageView.image = image
+                }
+            }
+        }
+
         return cell
     }
 }

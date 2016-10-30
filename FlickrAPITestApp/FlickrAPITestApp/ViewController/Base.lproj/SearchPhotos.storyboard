@@ -70,7 +70,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ry7-AU-mNK" firstAttribute="top" secondItem="9dX-VL-S6T" secondAttribute="bottom" constant="8" id="2Uh-GY-OYK"/>
                             <constraint firstAttribute="trailing" secondItem="Rde-Rg-nbT" secondAttribute="trailing" id="58o-gP-XAO"/>
@@ -86,17 +86,11 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Rde-Rg-nbT" id="LQ0-AQ-ZDs"/>
-                        <outlet property="headerView" destination="veG-2Z-4aE" id="dGB-dc-bjv"/>
                         <outlet property="searchButton" destination="UFl-CU-2P6" id="FGs-cO-0s2"/>
                         <outlet property="textField" destination="ry7-AU-mNK" id="6Ys-sp-TbX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="veG-2Z-4aE">
-                    <rect key="frame" x="0.0" y="0.0" width="343" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
