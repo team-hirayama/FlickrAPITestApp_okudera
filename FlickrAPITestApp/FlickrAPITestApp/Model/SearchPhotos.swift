@@ -8,25 +8,96 @@
 
 import UIKit
 
+private struct elementName {
+    let id = "id"
+    let secret = "secret"
+    let server = "server"
+    let farm = "farm"
+}
+
 class SearchPhotos: NSObject {
     
-    class func search(text: String) {
+    
+    var photoInfoModel = PhotoInfoModel()
+    var photosInfoModel = PhotosInfoModel()
+    
+    func photoURL(photoInfo: PhotoInfoModel) -> String {
+        return String(format: "https://farm%@.staticflickr.com/%@/%@_%@.jpg", photoInfo.farm, photoInfo.server, photoInfo.id, photoInfo.secret)
+    }
+    
+    
+    func search(text: String, pageString: String, completionHandler: @escaping (_ responseImages: [UIImage]) -> Void) {
+//    func search(text: String, pageString: String) -> [UIImage] {
         let urlString = "https://api.flickr.com/services/rest/"
-        let params: [String: Any] = ["api_key": "10ba93bbe49a6480d765ce486673954a",
-                                     "method": "flickr.photos.search",
-                                     "text": text]
-
+        let perPageString = "50"
         
-        APIClient.requestItems(urlString: urlString, params: params) { (response) in
+        let params: [String: Any] = ["method": "flickr.photos.search",
+                                     "per_page": perPageString,
+                                     "text": text,
+                                     "page": pageString,
+                                     "api_key": "10ba93bbe49a6480d765ce486673954a"]
+        
+        let apiClient = APIClient()
+        
+        var images = [UIImage]()
+        
+        apiClient.requestItems(urlString: urlString, params: params) { (response) in
             switch response {
-            case .Success(let items):
-                debugPrint(items)
+            case .Success(let responseData):
                 
-//                items
+                let responseData = responseData as! Data
+                
+                let xml = XMLParser(data: responseData)
+                xml.delegate = self
+                xml.parse()
+                
+                debugPrint("---------XMLParse END---------")
+
+                for photoInfo in self.photosInfoModel.photos {
+//                    DispatchQueue.global(qos: .default).async {
+                    
+                        guard let url = URL(string: self.photoURL(photoInfo: photoInfo)) else {
+                            return
+                        }
+                        
+                        let imageData = try! Data(contentsOf: url)
+                        if let image = UIImage(data: imageData) {
+                            images.append(image)
+                        }
+                        
+//                    }
+                }
+                completionHandler(images)
                 
             case .Error(let error):
                 debugPrint("error:\(error)")
             }
         }
+    }
+
+}
+
+extension SearchPhotos: XMLParserDelegate {
+    
+    func parserDidStartDocument(_ parser: XMLParser) {
+        photosInfoModel = PhotosInfoModel()
+    }
+    
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        
+        guard let idString = attributeDict["id"], let secretString = attributeDict["secret"],
+            let serverString = attributeDict["server"], let farmString = attributeDict["farm"] else {
+                return
+        }
+        
+        self.photoInfoModel = PhotoInfoModel()
+        
+        // スペース、改行を削除した文字列をphotoInfoModelに格納
+        self.photoInfoModel.id = idString.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.photoInfoModel.secret = secretString.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.photoInfoModel.server = serverString.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.photoInfoModel.farm = farmString.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        self.photosInfoModel.photos.append(self.photoInfoModel)
     }
 }

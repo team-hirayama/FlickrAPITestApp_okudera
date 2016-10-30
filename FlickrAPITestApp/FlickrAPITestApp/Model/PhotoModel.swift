@@ -8,13 +8,17 @@
 
 import UIKit
 
-class PhotoModel: NSObject {
-    struct PhotoModel {
-        var image = ""
-    }
-    
-    struct PhotosModel {
-        var photos = [PhotoModel]()
-    }
+struct PhotoInfoModel {
+    var id = ""
+    var secret = ""
+    var server = ""
+    var farm = ""
+}
 
+struct PhotosInfoModel {
+    var page = ""
+    var pages = ""
+    var parpage = ""
+    var total = ""
+    var photos = [PhotoInfoModel]()
 }
